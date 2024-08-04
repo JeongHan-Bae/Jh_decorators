@@ -1,0 +1,13 @@
+# Ignore Visual Studio Code settings
+.vscode/
+.vscode/*
+
+# Ignore IntelliJ IDEA settings
+.idea/
+.idea/*
+
+# Ignore temporary or temp folders
+temp/
+temp/*
+tmp/
+tmp/*
