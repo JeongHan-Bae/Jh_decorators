@@ -62,6 +62,19 @@ These links will execute the commands in PyCharm without needing to open the ter
 - `@YAMLize`: Adds YAML serialization and deserialization methods to the class.
 - `@Dictize`: Adds dictionary conversion methods to the class.
 
+### API Generation
+
+- `generate_api(include_unannotated: bool = False) -> None`: Generates a `.pyi` file containing the signatures and docstrings of the annotated functions.
+
+    ```python
+    from jh_decorators.documentation import generate_api
+
+    if __name__ == "__main__":
+        generate_api(include_unannotated=True)
+    ```
+
+    This utility generates a `.pyi` file with the same name as the module, replacing all `Annotation` decorators with a default `Documented` decorator without any details for simplicity. It generates all dynamic changes such as adding methods to classes or changing function/class documentation into a static `.pyi` file, making it better for IDE code checking.
+
 ## Contributing
 
 Contributions to `jh_decorators` are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) and [security guidelines](SECURITY.md) to start.
